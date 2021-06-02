@@ -1,0 +1,2 @@
+"{lib,app}/**/*.rb" --plugin rails
+'db/schema.rb'

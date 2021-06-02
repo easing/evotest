@@ -1,0 +1,12 @@
+require: rubocop-performance
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+Style/AsciiComments:
+  Enabled: false

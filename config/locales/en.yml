@@ -1,0 +1,6 @@
+en:
+  status:
+    expire_in_1_week: Will expire in less than 1 week
+    expire_in_2_weeks: Will expire in less than 2 weeks
+    valid: Everything is fine
+    missed: Missed SSL Cert

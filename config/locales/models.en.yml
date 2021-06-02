@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+    attributes:
+      status:
+        id: Id
+        status_type: SSL status
+        hostname: Host
+        current: Is actual?
+        created_at: Created at
+        updated_at: Refreshed at
+      domain:
+        id: Id
+        hostname: Host
+        created_at: Created at

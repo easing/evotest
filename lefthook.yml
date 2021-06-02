@@ -1,0 +1,10 @@
+pre-commit:
+  commands:
+    rubocop:
+      glob: "*.{rb}"
+      run: bundle exec rubocop --parallel
+    annotate:
+      glob: "*.{rb}"
+      run: bundle exec annotate --models
+    tests:
+      run: bundle exec rails test

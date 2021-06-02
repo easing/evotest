@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="https://petstore.swagger.io/swagger-ui.css"/>
+</head>
+
+<body style="margin: 0; padding: 0">
+<div id="swagger-ui"></div>
+
+<script src="https://petstore.swagger.io/swagger-ui-bundle.js" charset="UTF-8"></script>
+<script src="https://petstore.swagger.io/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+<script>
+    window.onload = function () {
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+            "dom_id": "#swagger-ui",
+            deepLinking: true,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+            ],
+            plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+            ],
+            layout: "StandaloneLayout",
+            validatorUrl: "https://validator.swagger.io/validator",
+            url: "/swagger.json",
+
+            // https://github.com/ruby-grape/grape-swagger/issues/623
+            requestInterceptor: function (request) {
+                request.headers["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8"
+                return request
+            }
+        })
+        window.ui = ui;
+    };
+</script>
+</body>
+</html>

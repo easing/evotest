@@ -1,0 +1,12 @@
+:schedule:
+  CheckAllDomainsJob:
+    cron: '0 /20 * * * *'
+    queue: domains
+
+:verbose: false
+:concurrency: 10
+:timeout: 25
+
+:queues:
+  - domains
+  - default
